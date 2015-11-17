@@ -1,10 +1,24 @@
 # doo-macro-example
 
-A Clojure library designed to ... well, that part is up to you.
+Showcases that the ClojureScript compiler doesn't watch macro.clj files.
 
-## Usage
+To reproduce the behavior, download the
+[cljs.jar](https://github.com/clojure/clojurescript/releases/download/r1.7.170/cljs.jar)
+into the top directory, run
 
-FIXME
+```sh
+# start the build
+./script/watch
+# wait for first build to finish
+# now try running the result
+node out/main.js
+# you should see "hello!!!"
+# now go and edit & save doo_macro_example/macros.clj
+# check if the watch noticed
+# run the result again to see if it updated
+node out/main.js
+# you see "hello!!!" again :(
+```
 
 ## License
 
