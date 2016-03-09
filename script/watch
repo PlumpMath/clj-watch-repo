@@ -1,1 +1,2 @@
+#!/bin/bash
 java -cp cljs.jar:src:test clojure.main script/watch.clj
